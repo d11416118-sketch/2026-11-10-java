@@ -14,7 +14,7 @@ public class A2 {
         print_addr(number);
     }
     /*
-     印出陣列中值為 0（沒被排除）的索引，也就是剩下的候選數字，每 10 個換一行。
+     印出陣列中值為 0（沒被排除）的索引，也就是剩下的候選數字，每 10 個換一行
      */
     public static void print_addr(int[] number) {
         int count =0;
@@ -57,7 +57,7 @@ public class A2 {
     }
     /*
       把四位數 x 拆成各位數字存入陣列：
-      a[0] 個位、a[1] 十位、a[2] 百位、a[3] 千位（順序跟 11/03 版相反）。
+      a[0] 個位、a[1] 十位、a[2] 百位、a[3] 千位（順序跟 11/03 版相反）
      */
     public static void cut(int x,int[] a) {
           a[3] = x / 1000;        
@@ -66,7 +66,7 @@ public class A2 {
           a[0]= x % 10; 
     }
     /*
-      比較兩個陣列「不同位置」的數字，只要有任一位相同就回傳 1，否則回傳 0。
+      比較兩個陣列「不同位置」的數字，只要有任一位相同就回傳 1，否則回傳 0
      */
     public static int repate(int[] a,int[] b) {
          int flag=0;
