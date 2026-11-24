@@ -14,7 +14,7 @@ public class A2 {
         print_addr(number);
     }
     /*
-     印出陣列中值為 0（沒被排除）的索引，也就是剩下的候選數字，每 10 個左右換一行。
+     印出陣列中值為 0（沒被排除）的索引，也就是剩下的候選數字，每 10 個換一行。
      */
     public static void print_addr(int[] number) {
         int count =0;
@@ -28,13 +28,12 @@ public class A2 {
         }
     }
     /*
-     檢查四位數 x 有沒有重複的數字，有重複回傳 1，沒有回傳 0。
-     （被註解掉的寫法是把四個位數兩兩比較。）
-     重點 x 拆進 a、b 再交給 repate() 比對相同位置，結果永遠是 1；
-        註解掉的兩兩比較寫法才能真正檢查重複。
+     檢查四位數 x 有沒有重複的數字，有重複回傳 1，沒有回傳 0
+     重點 x 拆進 a、b 再交給 repate() 比對不同位置
      */
     public static int check_4(int x) {
         /*
+        被註解掉的寫法是把四個位數兩兩比較
         int a = x / 1000;        
         int b = (x / 100) % 10;  
         int c = (x / 10) % 10;   
@@ -67,13 +66,13 @@ public class A2 {
           a[0]= x % 10; 
     }
     /*
-      比較兩個陣列「相同位置」的數字，只要有任一位相同就回傳 1，否則回傳 0。
+      比較兩個陣列「不同位置」的數字，只要有任一位相同就回傳 1，否則回傳 0。
      */
     public static int repate(int[] a,int[] b) {
          int flag=0;
             for(int i=0;i<a.length;i++){ 
                 for(int j=0;j<b.length;j++){
-                    if(i==j){
+                    if(i!=j){
                         if(a[i]==b[j]){
                             flag = 1 ;
                         }
